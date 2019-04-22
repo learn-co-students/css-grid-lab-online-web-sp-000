@@ -8,6 +8,12 @@ body {
   height: 100vh;
   width: 100vw;
   /* your properties here */
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  /*grid-template-columns: 50px 10% 25%;*/
+  /*grid-template: [header-start] 1fr [header-end] 1fr 1fr 1fr/ 1fr 1fr 1fr;*/
+  grid-auto-rows: 50px;
+  grid-gap: 5px;
 }
 
 .grid-item {
@@ -16,3 +22,10 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem{
+ grid-area: 2 / 2 / 4 / 4;
+ height: 50%;
+ width: 50%;
+ justify-self: center;
+ align-self: center;
+}
