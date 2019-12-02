@@ -8,8 +8,8 @@ body {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-  /* your properties here */
+  grid-template:   1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+  /* your propert1fr 1fr 1fries here */
 }
 
 .grid-item {
@@ -18,3 +18,10 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-area: 2 / 2 / 4 / 4;
+  height: 50%;
+  width: 50%;
+  justify-self: center;
+}
+
