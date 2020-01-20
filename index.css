@@ -3,12 +3,23 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/*to get a grid up and running on a webpage, at minimum, you will need one 'container' element. This element should display set to grid in its styling.*/
 .grid-container {
   height: 100vh;
   width: 100vw;
   /* your properties here */
+  display: grid; /*12 rows fill whole screen*/
+  /*grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr ;4 rows and 3 columns that is 12 fraction units fr
+  a unique fraction unit, fr, with a total of four fractions, representing the number of rows in our grid, and then three more fractions, representing the number of columns.*/
+  grid-template: auto / 1fr 1fr 1fr;/*we've defined the three columns, but have now set it so the browser decides how many rows are necessary. 
+  Grids are often used to display an indeterminate amount of content - for example, available products or a list of movies.*/
+  /* grid is designed to display elements in a single column, setting grid-template-columns to auto or not setting it at all will always produce just one column*/
+  /*same as abowe grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+  repeat setting takes in two arguments: the first is the amount of rows or columns you want; the second is the size of those columns, using the units above.*/
+  /*grid-template: [header-start] 1fr [header-end] 1fr 1fr 1fr / 1fr 1fr 1fr;
+  the first row of our grid to be where our 'header' will go*/
 }
+
 
 .grid-item {
   background-color: grey;
@@ -16,3 +27,16 @@ body {
 }
 
 /* add the .bigItem class */
+/*To get fine tuned with specific content, we can apply styling to child elements, overriding template rules.*/
+.bigItem {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  /*grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> / <grid-column-end>*/
+  /*grid-area: 2 / 2 / 4 / 4;*/
+  height: 50%;
+  width: 50%;
+  justify-self: center; /*justify-self and align-self properties define where, within a grid cell, an element will be positioned. Using these properties will stop grid from automatically expanding an element to fill the entire cell.*/
+  align-self: center;
+}
