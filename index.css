@@ -8,6 +8,9 @@ body {
   height: 100vh;
   width: 100vw;
   /* your properties here */
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
 }
 
 .grid-item {
@@ -16,3 +19,106 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-area: 2 / 2 / 4 / 4;
+  height: 49%;
+  width: 49%;
+  justify-self: center;
+  align-self: center;
+}
+
+.smallLeftUpTop {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 48%;
+  width: 48%;
+  justify-self: left;
+  align-self: flex-start;
+}
+
+.smallLeftUpBottom {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 48%;
+  width: 48%;
+  justify-self: left;
+  align-self: flex-end;
+}
+
+.smallLeftDownTop {
+  grid-area: 3 / 2 / 4 / 3;
+  height: 48%;
+  width: 48%;
+  justify-self: left;
+  align-self: flex-start;
+}
+
+.smallLeftDownBottom {
+  grid-area: 3 / 2 / 4 / 3;
+  height: 48%;
+  width: 48%;
+  justify-self: left;
+  align-self: flex-end;
+}
+
+.smallRightUpTop {
+  grid-area: 2 / 3 / 3 / 4;
+  height: 48%;
+  width: 48%;
+  justify-self: right;
+  align-self: flex-start;
+}
+
+.smallRightUpBottom {
+  grid-area: 2 / 3 / 3 / 4;
+  height: 48%;
+  width: 48%;
+  justify-self: right;
+  align-self: flex-end;
+}
+
+.smallRightDownTop {
+  grid-area: 3 / 3 / 4 / 4;
+  height: 48%;
+  width: 48%;
+  justify-self: right;
+  align-self: flex-start;
+}
+
+.smallRightDownBottom {
+  grid-area: 3 / 3 / 4 / 4;
+  height: 48%;
+  width: 48%;
+  justify-self: right;
+  align-self: flex-end;
+}
+
+.smallTopMiddleRight {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 48%;
+  width: 48%;
+  justify-self: right;
+  align-self: flex-start;
+}
+
+.smallTopMiddleLeft {
+  grid-area: 2 / 3 / 3 / 4;
+  height: 48%;
+  width: 48%;
+  justify-self: left;
+  align-self: flex-start;
+}
+
+.smallBottomMiddleRight {
+  grid-area: 3 / 2 / 4 / 3;
+  height: 48%;
+  width: 48%;
+  justify-self: right;
+  align-self: flex-end;
+}
+
+.smallBottomMiddleLeft {
+  grid-area: 3 / 3 / 4 / 4;
+  height: 48%;
+  width: 48%;
+  justify-self: left;
+  align-self: flex-end;
+}
