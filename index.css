@@ -7,7 +7,8 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
-  /* your properties here */
+  display: grid;
+  grid-template: true;
 }
 
 .grid-item {
@@ -16,3 +17,7 @@ body {
 }
 
 /* add the .bigItem class */
+
+.bigItem {
+  grid-area: all;
+}
