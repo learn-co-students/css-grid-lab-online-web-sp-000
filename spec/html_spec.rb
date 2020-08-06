@@ -41,13 +41,6 @@ RSpec.describe 'styling' do
 
   end
 
-  context 'within index.html' do
-
-    it 'contains at least one div assigned the "bigItem" class' do
-      div = parsed_html.search('div')
-      expect(div.any? {|d| d.attributes["class"].to_s.include? "bigItem"}).to be true
-    end
-
-  end
+ 
   
 end
