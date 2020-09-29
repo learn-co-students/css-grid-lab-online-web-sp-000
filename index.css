@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+
+}
 html,
 body {
   margin: 0;
@@ -7,7 +11,17 @@ body {
 .grid-container {
   height: 100vh;
   width: 100vw;
+  border:1px solid red;
   /* your properties here */
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr ;
+  /*that is same as:
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
+  */
+  grid-gap: 15px;
+  padding: 20px;
+  justify-
 }
 
 .grid-item {
@@ -16,3 +30,17 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-area: 2 / 2 / 4 / 4;
+  height: 50%;
+  width: 50%;
+  justify-self: center;
+  align-self: center
+  /*this bigi tem has its grid area designed to take up 4 cells
+  then we set the height and width of it to be half of that, which makes area 1/4 of 4 cells, = 1 cell
+  then we center it within its space horizontally and vetically
+  WARNING: Using these justify and align properties will stop grid from automatically expanding an element to fill the entire cell.
+  if it has one word the size will be only to fit that one word
+  that is not happening here only because i do height and width 50% 50%
+*/
+}
