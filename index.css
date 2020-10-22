@@ -1,18 +1,32 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .grid-container {
-  height: 100vh;
-  width: 100vw;
-  /* your properties here */
+	height: 100vh;
+	width: 100vw;
+	/* your properties here */
+	display: grid;
+	grid-template: auto / repeat(3, 1fr); /* row x column ; 4x3 grid ; fr stands for fraction */
+	/* setting row to auto allows us to display an indeterminate amount of content ; just specify how many columns you want */
+	grid-gap: 5px;
 }
 
 .grid-item {
-  background-color: grey;
-  border: 1px solid black;
+	background-color: grey;
+	border: 1px solid black;
 }
 
 /* add the .bigItem class */
+
+.bigItem {
+	grid-area: 2 / 2 / 4 / 4;
+	height: 50%;
+	width: 50%;
+	/* shrink element within defined grid-area to 50% of height and width */
+	justify-self: center; /* center vertically */
+	align-self: center; /* center vertically */
+	/* grid-area shorthand: row-start / column-start / row-end  / column-end */
+}
