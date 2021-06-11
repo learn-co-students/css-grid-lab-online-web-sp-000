@@ -5,6 +5,11 @@ body {
 }
 
 .grid-container {
+  display: grid;
+  grid-template: [name-frist-row] 1fr [second-row] 1fr 1fr 1fr / 1fr 1fr 1fr;
+  /*grid-template: repeat(4, 1fr) / repeat(3, 1fr)*/
+  /*grid-template: 25% 25% 25% 25% / 1fr 1fr 1fr;*/
+  /*               rows, vertical /  colums */
   height: 100vh;
   width: 100vw;
   /* your properties here */
@@ -16,3 +21,9 @@ body {
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-area: 2 / 2 / 4 / 4;
+  height: 50%;
+  width: 50%;
+  justify-self: center;
+}
